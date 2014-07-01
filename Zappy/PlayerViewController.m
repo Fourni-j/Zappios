@@ -232,7 +232,6 @@
     thystameLayButton.layer.cornerRadius = 45;
     layLabel.layer.cornerRadius = 40;
     takeLabel.layer.cornerRadius = 40;
-    [self.navigationController.navigationBar setBackgroundColor:[[UIColor alloc] colorWithRed:44.0 green:62.0 blue:80.0 alpha:1.0]];
 }
 
 
