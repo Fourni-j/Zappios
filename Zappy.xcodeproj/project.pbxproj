@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC0869D919630A1A0067E395 /* Deraumere.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0869D819630A1A0067E395 /* Deraumere.png */; };
+		FCB3C6E81961829E00845FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6E71961829E00845FD6 /* Foundation.framework */; };
+		FCB3C6EA1961829E00845FD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6E91961829E00845FD6 /* CoreGraphics.framework */; };
+		FCB3C6EC1961829E00845FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6EB1961829E00845FD6 /* UIKit.framework */; };
+		FCB3C6F21961829E00845FD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C6F01961829E00845FD6 /* InfoPlist.strings */; };
+		FCB3C6F41961829E00845FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C6F31961829E00845FD6 /* main.m */; };
+		FCB3C6F81961829E00845FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C6F71961829E00845FD6 /* AppDelegate.m */; };
+		FCB3C6FB1961829E00845FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C6F91961829E00845FD6 /* Main.storyboard */; };
+		FCB3C6FE1961829E00845FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C6FD1961829E00845FD6 /* ViewController.m */; };
+		FCB3C7001961829E00845FD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C6FF1961829E00845FD6 /* Images.xcassets */; };
+		FCB3C7071961829E00845FD6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C7061961829E00845FD6 /* XCTest.framework */; };
+		FCB3C7081961829E00845FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6E71961829E00845FD6 /* Foundation.framework */; };
+		FCB3C7091961829E00845FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6EB1961829E00845FD6 /* UIKit.framework */; };
+		FCB3C7111961829E00845FD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C70F1961829E00845FD6 /* InfoPlist.strings */; };
+		FCB3C7131961829E00845FD6 /* ZappyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C7121961829E00845FD6 /* ZappyTests.m */; };
+		FCB3C720196189C900845FD6 /* ZappyTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C71F196189C900845FD6 /* ZappyTitle.png */; };
+		FCB3C7231961928300845FD6 /* AdministratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C7221961928300845FD6 /* AdministratorViewController.m */; };
+		FCB3C7271961929300845FD6 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3C7261961929300845FD6 /* PlayerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCB3C70A1961829E00845FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCB3C6DC1961829E00845FD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCB3C6E31961829E00845FD6;
+			remoteInfo = Zappy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC0869D819630A1A0067E395 /* Deraumere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deraumere.png; sourceTree = "<group>"; };
+		FCB3C6E41961829E00845FD6 /* Zappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB3C6E71961829E00845FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FCB3C6E91961829E00845FD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FCB3C6EB1961829E00845FD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FCB3C6EF1961829E00845FD6 /* Zappy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zappy-Info.plist"; sourceTree = "<group>"; };
+		FCB3C6F11961829E00845FD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FCB3C6F31961829E00845FD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCB3C6F51961829E00845FD6 /* Zappy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zappy-Prefix.pch"; sourceTree = "<group>"; };
+		FCB3C6F61961829E00845FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCB3C6F71961829E00845FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCB3C6FA1961829E00845FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCB3C6FC1961829E00845FD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCB3C6FD1961829E00845FD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCB3C6FF1961829E00845FD6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FCB3C7051961829E00845FD6 /* ZappyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZappyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB3C7061961829E00845FD6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FCB3C70E1961829E00845FD6 /* ZappyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZappyTests-Info.plist"; sourceTree = "<group>"; };
+		FCB3C7101961829E00845FD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FCB3C7121961829E00845FD6 /* ZappyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZappyTests.m; sourceTree = "<group>"; };
+		FCB3C71F196189C900845FD6 /* ZappyTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZappyTitle.png; sourceTree = "<group>"; };
+		FCB3C7211961928300845FD6 /* AdministratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdministratorViewController.h; sourceTree = "<group>"; };
+		FCB3C7221961928300845FD6 /* AdministratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdministratorViewController.m; sourceTree = "<group>"; };
+		FCB3C7251961929300845FD6 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		FCB3C7261961929300845FD6 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCB3C6E11961829E00845FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C6EA1961829E00845FD6 /* CoreGraphics.framework in Frameworks */,
+				FCB3C6EC1961829E00845FD6 /* UIKit.framework in Frameworks */,
+				FCB3C6E81961829E00845FD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB3C7021961829E00845FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C7071961829E00845FD6 /* XCTest.framework in Frameworks */,
+				FCB3C7091961829E00845FD6 /* UIKit.framework in Frameworks */,
+				FCB3C7081961829E00845FD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC0869D719630A070067E395 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				FC0869D819630A1A0067E395 /* Deraumere.png */,
+				FCB3C71F196189C900845FD6 /* ZappyTitle.png */,
+			);
+			name = Asset;
+			sourceTree = "<group>";
+		};
+		FCB3C6DB1961829E00845FD6 = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6ED1961829E00845FD6 /* Zappy */,
+				FCB3C70C1961829E00845FD6 /* ZappyTests */,
+				FCB3C6E61961829E00845FD6 /* Frameworks */,
+				FCB3C6E51961829E00845FD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCB3C6E51961829E00845FD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6E41961829E00845FD6 /* Zappy.app */,
+				FCB3C7051961829E00845FD6 /* ZappyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCB3C6E61961829E00845FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6E71961829E00845FD6 /* Foundation.framework */,
+				FCB3C6E91961829E00845FD6 /* CoreGraphics.framework */,
+				FCB3C6EB1961829E00845FD6 /* UIKit.framework */,
+				FCB3C7061961829E00845FD6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCB3C6ED1961829E00845FD6 /* Zappy */ = {
+			isa = PBXGroup;
+			children = (
+				FC0869D719630A070067E395 /* Asset */,
+				FCB3C71D196182BA00845FD6 /* Delegate */,
+				FCB3C71C196182AD00845FD6 /* Graphic */,
+				FCB3C71E196182C700845FD6 /* Controller */,
+				FCB3C6FF1961829E00845FD6 /* Images.xcassets */,
+				FCB3C6EE1961829E00845FD6 /* Supporting Files */,
+			);
+			path = Zappy;
+			sourceTree = "<group>";
+		};
+		FCB3C6EE1961829E00845FD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6EF1961829E00845FD6 /* Zappy-Info.plist */,
+				FCB3C6F01961829E00845FD6 /* InfoPlist.strings */,
+				FCB3C6F31961829E00845FD6 /* main.m */,
+				FCB3C6F51961829E00845FD6 /* Zappy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCB3C70C1961829E00845FD6 /* ZappyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C7121961829E00845FD6 /* ZappyTests.m */,
+				FCB3C70D1961829E00845FD6 /* Supporting Files */,
+			);
+			path = ZappyTests;
+			sourceTree = "<group>";
+		};
+		FCB3C70D1961829E00845FD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C70E1961829E00845FD6 /* ZappyTests-Info.plist */,
+				FCB3C70F1961829E00845FD6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCB3C71C196182AD00845FD6 /* Graphic */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6F91961829E00845FD6 /* Main.storyboard */,
+			);
+			name = Graphic;
+			sourceTree = "<group>";
+		};
+		FCB3C71D196182BA00845FD6 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6F61961829E00845FD6 /* AppDelegate.h */,
+				FCB3C6F71961829E00845FD6 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		FCB3C71E196182C700845FD6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C6FC1961829E00845FD6 /* ViewController.h */,
+				FCB3C6FD1961829E00845FD6 /* ViewController.m */,
+				FCB3C7211961928300845FD6 /* AdministratorViewController.h */,
+				FCB3C7221961928300845FD6 /* AdministratorViewController.m */,
+				FCB3C7251961929300845FD6 /* PlayerViewController.h */,
+				FCB3C7261961929300845FD6 /* PlayerViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCB3C6E31961829E00845FD6 /* Zappy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCB3C7161961829E00845FD6 /* Build configuration list for PBXNativeTarget "Zappy" */;
+			buildPhases = (
+				FCB3C6E01961829E00845FD6 /* Sources */,
+				FCB3C6E11961829E00845FD6 /* Frameworks */,
+				FCB3C6E21961829E00845FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zappy;
+			productName = Zappy;
+			productReference = FCB3C6E41961829E00845FD6 /* Zappy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCB3C7041961829E00845FD6 /* ZappyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCB3C7191961829E00845FD6 /* Build configuration list for PBXNativeTarget "ZappyTests" */;
+			buildPhases = (
+				FCB3C7011961829E00845FD6 /* Sources */,
+				FCB3C7021961829E00845FD6 /* Frameworks */,
+				FCB3C7031961829E00845FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCB3C70B1961829E00845FD6 /* PBXTargetDependency */,
+			);
+			name = ZappyTests;
+			productName = ZappyTests;
+			productReference = FCB3C7051961829E00845FD6 /* ZappyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCB3C6DC1961829E00845FD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					FCB3C6E31961829E00845FD6 = {
+						DevelopmentTeam = HWY6V6F9L7;
+					};
+					FCB3C7041961829E00845FD6 = {
+						TestTargetID = FCB3C6E31961829E00845FD6;
+					};
+				};
+			};
+			buildConfigurationList = FCB3C6DF1961829E00845FD6 /* Build configuration list for PBXProject "Zappy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCB3C6DB1961829E00845FD6;
+			productRefGroup = FCB3C6E51961829E00845FD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCB3C6E31961829E00845FD6 /* Zappy */,
+				FCB3C7041961829E00845FD6 /* ZappyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCB3C6E21961829E00845FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C7001961829E00845FD6 /* Images.xcassets in Resources */,
+				FCB3C6F21961829E00845FD6 /* InfoPlist.strings in Resources */,
+				FC0869D919630A1A0067E395 /* Deraumere.png in Resources */,
+				FCB3C6FB1961829E00845FD6 /* Main.storyboard in Resources */,
+				FCB3C720196189C900845FD6 /* ZappyTitle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB3C7031961829E00845FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C7111961829E00845FD6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCB3C6E01961829E00845FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C7231961928300845FD6 /* AdministratorViewController.m in Sources */,
+				FCB3C6FE1961829E00845FD6 /* ViewController.m in Sources */,
+				FCB3C6F81961829E00845FD6 /* AppDelegate.m in Sources */,
+				FCB3C6F41961829E00845FD6 /* main.m in Sources */,
+				FCB3C7271961929300845FD6 /* PlayerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB3C7011961829E00845FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB3C7131961829E00845FD6 /* ZappyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCB3C70B1961829E00845FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCB3C6E31961829E00845FD6 /* Zappy */;
+			targetProxy = FCB3C70A1961829E00845FD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCB3C6F01961829E00845FD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCB3C6F11961829E00845FD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FCB3C6F91961829E00845FD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCB3C6FA1961829E00845FD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCB3C70F1961829E00845FD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCB3C7101961829E00845FD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCB3C7141961829E00845FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FCB3C7151961829E00845FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCB3C7171961829E00845FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zappy/Zappy-Prefix.pch";
+				INFOPLIST_FILE = "Zappy/Zappy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FCB3C7181961829E00845FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zappy/Zappy-Prefix.pch";
+				INFOPLIST_FILE = "Zappy/Zappy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FCB3C71A1961829E00845FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zappy.app/Zappy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zappy/Zappy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ZappyTests/ZappyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FCB3C71B1961829E00845FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zappy.app/Zappy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zappy/Zappy-Prefix.pch";
+				INFOPLIST_FILE = "ZappyTests/ZappyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCB3C6DF1961829E00845FD6 /* Build configuration list for PBXProject "Zappy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB3C7141961829E00845FD6 /* Debug */,
+				FCB3C7151961829E00845FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCB3C7161961829E00845FD6 /* Build configuration list for PBXNativeTarget "Zappy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB3C7171961829E00845FD6 /* Debug */,
+				FCB3C7181961829E00845FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCB3C7191961829E00845FD6 /* Build configuration list for PBXNativeTarget "ZappyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB3C71A1961829E00845FD6 /* Debug */,
+				FCB3C71B1961829E00845FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCB3C6DC1961829E00845FD6 /* Project object */;
+}
