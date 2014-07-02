@@ -29,6 +29,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning
