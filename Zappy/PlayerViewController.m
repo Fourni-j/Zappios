@@ -243,8 +243,11 @@
     mendianeLabel.layer.cornerRadius = 45;
     phirasLabel.layer.cornerRadius = 45;
     thystameLabel.layer.cornerRadius = 45;
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -258,7 +261,6 @@
     [inputStream close];
     [outputStream close];
 }
-
 
 #pragma mark - AlertView Delegate
 
