@@ -14,6 +14,7 @@
     NSOutputStream  *outputStream;
     NSString        *connectAddress;
     NSInteger       connectPort;
+    NSString        *connectTeam;
 }
 
 @property (nonatomic, retain) NSInputStream     *inputStream;
@@ -21,6 +22,7 @@
 
 @property(nonatomic, strong) NSString *connectAddress;
 @property(nonatomic) NSInteger connectPort;
+@property(nonatomic, strong) NSString *connectTeam;
 
 @property (weak, nonatomic) IBOutlet UIButton *foodButton;
 @property (weak, nonatomic) IBOutlet UIButton *linemateTakeButton;

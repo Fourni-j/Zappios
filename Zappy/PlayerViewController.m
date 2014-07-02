@@ -24,7 +24,7 @@
 @implementation PlayerViewController
 
 @synthesize outputStream, inputStream;
-@synthesize connectAddress;
+@synthesize connectAddress, connectTeam;
 @synthesize connectPort;
 @synthesize foodButton, linemateLayButton, linemateTakeButton, foodLayButton, deraumereLayButton, deraumereTakeButton, siburLayButton, siburTakeButton, mendianeLayButton, mendianeTakeButton, phirasLayButton, phirasTakeButton, thystameLayButton, thystameTakeButton;
 
@@ -79,7 +79,7 @@
 - (void)checkExpression:(NSString *)msg
 {
     if ([msg isEqualToString:@"BIENVENUE\n"])
-        [self messageSend:@"team1"];
+        [self messageSend:connectTeam];
     else if ([msg isEqualToString:@"mort\n"])
         [self popPlayerEventAlert:@"Mort"];
     
