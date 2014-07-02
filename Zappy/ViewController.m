@@ -16,10 +16,16 @@
 
 @implementation ViewController
 
+@synthesize adminButton, playerButton;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    adminButton.layer.cornerRadius = 45;
+    playerButton.layer.cornerRadius = 45;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +58,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         CGRect f = self.view.frame;
-        f.origin.y = -330.0f;  //set the -35.0f to your required value
+        f.origin.y = -340.0f;  //set the -35.0f to your required value
         self.view.frame = f;
     }];
 }
@@ -67,7 +73,7 @@
 }
 
 
-
+#pragma mark - Passing data with segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -89,15 +95,26 @@
             pvc.connectPort = 4242;
         else
             pvc.connectPort = self.portField.text.intValue;
+        
+        if ([self.teamField.text isEqualToString:@""])
+            pvc.connectTeam = @"team1";
+        else
+            pvc.connectTeam = self.teamField.text;
     }
 }
 
+#pragma mark - connection button
+
 - (IBAction)ConnectAdmin:(id)sender {
-    NSLog(@"Switching view");
+    [self.view endEditing:YES];
+    
 }
 
 - (IBAction)ConnectPlayer:(id)sender {
+    [self.view endEditing:YES];
 }
+
+#pragma mark - Windows caracteristics
 
 - (BOOL)prefersStatusBarHidden
 {

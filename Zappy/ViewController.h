@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *addressField;
 @property (weak, nonatomic) IBOutlet UITextField *portField;
+@property (weak, nonatomic) IBOutlet UITextField *teamField;
+
+@property (weak, nonatomic) IBOutlet UIButton *adminButton;
+@property (weak, nonatomic) IBOutlet UIButton *playerButton;
 
 - (IBAction)ConnectAdmin:(id)sender;
 - (IBAction)ConnectPlayer:(id)sender;
