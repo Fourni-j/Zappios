@@ -22,5 +22,11 @@
 @property(nonatomic, retain) NSInputStream  *inputStream;
 @property(nonatomic, retain) NSOutputStream *outputStream;
 
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UITextField *inputField;
+@property (weak, nonatomic) IBOutlet UIImageView *fondImage;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+- (IBAction)send:(id)sender;
 
 @end
