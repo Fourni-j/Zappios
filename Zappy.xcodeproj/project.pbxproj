@@ -14,6 +14,8 @@
 		FC3A85B21963FE700018F493 /* incantation.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A85B11963FE700018F493 /* incantation.png */; };
 		FC3A85B51963FEC80018F493 /* menu_font.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A85B31963FEC80018F493 /* menu_font.png */; };
 		FC3A85B61963FEC80018F493 /* player_font.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A85B41963FEC80018F493 /* player_font.png */; };
+		FC3A85B8196423DC0018F493 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A85B7196423DC0018F493 /* Menu.png */; };
+		FC3A85BA19642EC20018F493 /* fonts.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3A85B919642EC20018F493 /* fonts.png */; };
 		FCB3C6E81961829E00845FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6E71961829E00845FD6 /* Foundation.framework */; };
 		FCB3C6EA1961829E00845FD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6E91961829E00845FD6 /* CoreGraphics.framework */; };
 		FCB3C6EC1961829E00845FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB3C6EB1961829E00845FD6 /* UIKit.framework */; };
@@ -51,6 +53,8 @@
 		FC3A85B11963FE700018F493 /* incantation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incantation.png; sourceTree = "<group>"; };
 		FC3A85B31963FEC80018F493 /* menu_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_font.png; sourceTree = "<group>"; };
 		FC3A85B41963FEC80018F493 /* player_font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_font.png; sourceTree = "<group>"; };
+		FC3A85B7196423DC0018F493 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		FC3A85B919642EC20018F493 /* fonts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fonts.png; sourceTree = "<group>"; };
 		FCB3C6E41961829E00845FD6 /* Zappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB3C6E71961829E00845FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCB3C6E91961829E00845FD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +108,8 @@
 		FC0869D719630A070067E395 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				FC3A85B7196423DC0018F493 /* Menu.png */,
+				FC3A85B919642EC20018F493 /* fonts.png */,
 				FC3A85B31963FEC80018F493 /* menu_font.png */,
 				FC3A85B41963FEC80018F493 /* player_font.png */,
 				FC3A85B11963FE700018F493 /* incantation.png */,
@@ -296,6 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3A85BA19642EC20018F493 /* fonts.png in Resources */,
+				FC3A85B8196423DC0018F493 /* Menu.png in Resources */,
 				FCB3C7001961829E00845FD6 /* Images.xcassets in Resources */,
 				FC3A85AF1963FDFA0018F493 /* avance.png in Resources */,
 				FC3A85B61963FEC80018F493 /* player_font.png in Resources */,
