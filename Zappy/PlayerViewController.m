@@ -10,9 +10,13 @@
 
 @interface PlayerViewController ()
 {
+    BOOL food;
+    BOOL linemate;
     BOOL deraumere;
     BOOL sibur;
-    BOOL food;
+    BOOL mendiane;
+    BOOL phiras;
+    BOOL thystame;
 }
 
 @end
@@ -24,7 +28,7 @@
 @synthesize connectPort;
 @synthesize foodButton, linemateLayButton, linemateTakeButton, foodLayButton, deraumereLayButton, deraumereTakeButton, siburLayButton, siburTakeButton, mendianeLayButton, mendianeTakeButton, phirasLayButton, phirasTakeButton, thystameLayButton, thystameTakeButton;
 
-@synthesize layLabel, takeLabel;
+@synthesize foodLabel, linemateLabel, deraumereLabel, siburLabel, mendianeLabel, phirasLabel, thystameLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,11 +45,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)resetAttribute
+- (void)resetStuff
 {
+    food = NO;
+    linemate = NO;
     deraumere = NO;
     sibur = NO;
-    food = NO;
+    mendiane = NO;
+    phiras = NO;
+    thystame = NO;
 }
 
 #pragma mark - AlertView initialisation
@@ -80,8 +88,6 @@
         
     }
 }
-
-
 
 #pragma mark - Network functions
 
@@ -215,7 +221,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self resetAttribute];
+    [self resetStuff];
     foodButton.layer.cornerRadius = 45;
     foodLayButton.layer.cornerRadius = 45;
     linemateTakeButton.layer.cornerRadius = 45;
@@ -230,8 +236,13 @@
     phirasLayButton.layer.cornerRadius = 45;
     thystameTakeButton.layer.cornerRadius = 45;
     thystameLayButton.layer.cornerRadius = 45;
-    layLabel.layer.cornerRadius = 40;
-    takeLabel.layer.cornerRadius = 40;
+    foodLabel.layer.cornerRadius = 45;
+    linemateLabel.layer.cornerRadius = 45;
+    deraumereLabel.layer.cornerRadius = 45;
+    siburLabel.layer.cornerRadius = 45;
+    mendianeLabel.layer.cornerRadius = 45;
+    phirasLabel.layer.cornerRadius = 45;
+    thystameLabel.layer.cornerRadius = 45;
 }
 
 

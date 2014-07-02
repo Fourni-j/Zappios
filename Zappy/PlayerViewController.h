@@ -14,7 +14,6 @@
     NSOutputStream  *outputStream;
     NSString        *connectAddress;
     NSInteger       connectPort;
-    NSMutableArray  *messages;
 }
 
 @property (nonatomic, retain) NSInputStream     *inputStream;
@@ -22,7 +21,6 @@
 
 @property(nonatomic, strong) NSString *connectAddress;
 @property(nonatomic) NSInteger connectPort;
-@property(nonatomic, retain) NSMutableArray *message;
 
 @property (weak, nonatomic) IBOutlet UIButton *foodButton;
 @property (weak, nonatomic) IBOutlet UIButton *linemateTakeButton;
@@ -40,8 +38,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *phirasLayButton;
 @property (weak, nonatomic) IBOutlet UIButton *thystameLayButton;
 
-@property (weak, nonatomic) IBOutlet UILabel *layLabel;
-@property (weak, nonatomic) IBOutlet UILabel *takeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *foodLabel;
+@property (weak, nonatomic) IBOutlet UILabel *linemateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *deraumereLabel;
+@property (weak, nonatomic) IBOutlet UILabel *siburLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mendianeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phirasLabel;
+@property (weak, nonatomic) IBOutlet UILabel *thystameLabel;
+
 
 - (IBAction)avance:(UIButton *)sender;
 - (IBAction)turnLeft:(id)sender;
@@ -64,5 +69,13 @@
 - (IBAction)posePhiras:(id)sender;
 - (IBAction)poseThystane:(id)sender;
 
+
+- (void)messageReceived;
+- (void)messageSend:(NSString *)msg;
+- (void)initNetworkCommunication;
+- (void)checkExpression:(NSString *)msg;
+- (void)popPlayerEventAlert:(NSString *)msg;
+- (void)popDisconnectAlert:(NSString *)msg;
+- (void)resetStuff;
 
 @end

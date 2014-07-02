@@ -35,7 +35,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -67,4 +67,10 @@
 
 - (IBAction)ConnectPlayer:(id)sender {
 }
+
+- (BOOL)prefersStatusBarHidden
+{
+    return true;
+}
+
 @end
