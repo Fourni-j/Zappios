@@ -40,7 +40,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *phirasLayButton;
 @property (weak, nonatomic) IBOutlet UIButton *thystameLayButton;
 
-
 @property (weak, nonatomic) IBOutlet UILabel *foodLabel;
 @property (weak, nonatomic) IBOutlet UILabel *linemateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deraumereLabel;
@@ -49,6 +48,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *phirasLabel;
 @property (weak, nonatomic) IBOutlet UILabel *thystameLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *needLinemate;
+@property (weak, nonatomic) IBOutlet UILabel *needDeraumere;
+@property (weak, nonatomic) IBOutlet UILabel *needSibur;
+@property (weak, nonatomic) IBOutlet UILabel *needMendiane;
+@property (weak, nonatomic) IBOutlet UILabel *needPhiras;
+@property (weak, nonatomic) IBOutlet UILabel *needThystame;
+@property (weak, nonatomic) IBOutlet UILabel *needPlayer;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 
 - (IBAction)avance:(UIButton *)sender;
 - (IBAction)turnLeft:(id)sender;
@@ -78,6 +87,5 @@
 - (void)checkExpression:(NSString *)msg;
 - (void)popPlayerEventAlert:(NSString *)msg;
 - (void)popDisconnectAlert:(NSString *)msg;
-- (void)resetStuff;
 
 @end
