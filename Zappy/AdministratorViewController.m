@@ -35,8 +35,6 @@
     }
     
     sendButton.layer.cornerRadius = 10;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +49,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
+    [self initNetworkCommunication];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -74,8 +72,8 @@
         CGRect  fb = sendButton.frame;
         CGRect fi = fondImage.frame;
         CGRect ft = textView.frame;
-        f.origin.y = 380.0f;  //set the -35.0f to your required value
-        fb.origin.y = 380.0f;  //set the -35.0f to your required value
+        f.origin.y = 380.0f;
+        fb.origin.y = 380.0f;
         fi.origin.y = 372.0f;
         ft.size.height = 340.0f;
         inputField.frame = f;
@@ -96,7 +94,7 @@
         fb.origin.y = 729.0f;
         f.origin.y = 729.0f;
         fi.origin.y = 721.0f;
-        ft.size.height = 985.0f;
+        ft.size.height =  690.0f;
         inputField.frame = f;
         sendButton.frame = fb;
         fondImage.frame = fi;
@@ -111,6 +109,8 @@
 
 - (void)initNetworkCommunication
 {
+    NSLog(@"%@:%i", self.connectAddress, self.connectPort);
+    
     CFReadStreamRef     readStream;
     CFWriteStreamRef    writeStream;
     CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)self.connectAddress, (int)self.connectPort, &readStream, &writeStream);
@@ -129,6 +129,25 @@
     
 }
 
+- (void)checkExpression:(NSString *)msg
+{
+//    if ([msg isEqualToString:@"BIENVENUE\n"])
+//        [self messageSend:@"team1"];
+//    
+}
+
+- (void)addToTextView:(NSString *)sender withMsg:(NSString *)text
+{
+//    [textView setScrollEnabled:NO];
+    if ([textView.text isEqualToString:@""])
+        textView.text = [NSString stringWithFormat:@"\n%@%@", sender, text];
+    else
+        textView.text = [NSString stringWithFormat:@"%@%@%@", textView.text, sender, text];
+//    [textView setScrollEnabled:YES];
+    [textView setScrollsToTop:NO];
+    [textView scrollRangeToVisible:NSMakeRange([textView.text length], 0)];
+}
+
 - (void)messageReceived
 {
     uint8_t buffer[1024];
@@ -143,6 +162,7 @@
             if (nil != output)
             {
                 NSLog(@"server said: %@", output);
+                [self addToTextView:@"Server~>" withMsg:output];
             }
         }
     }
@@ -150,9 +170,13 @@
 
 - (void)messageSend:(NSString *)msg
 {
+    if ([msg isEqualToString:@""])
+        return;
     NSString *response = [NSString stringWithFormat:@"%@\n", msg];
     NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
     [outputStream write:[data bytes] maxLength:[data length]];
+    [self addToTextView:@"Admin~>" withMsg:response];
+    inputField.text = @"";
     NSLog(@"Message sent : %@", response);
 }
 
