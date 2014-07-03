@@ -73,11 +73,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier]isEqualToString:@"AdministratorScreen"] || [[segue identifier] isEqualToString:@"PlayerScreen"])
+    if ([[segue identifier]isEqualToString:@"AdministratorScreen"])
     {
         AdministratorViewController *avc = [segue destinationViewController];
-        avc.connectAddress = self.addressField.text;
-        avc.connectPort = self.portField.text.intValue;
+        
+        if ([self.addressField.text isEqualToString:@""])
+            avc.connectAddress = @"127.0.0.1";
+        else
+            avc.connectAddress = self.addressField.text;
+        if ([self.portField.text isEqualToString:@""])
+            avc.connectPort = 4242;
+        else
+            avc.connectPort = self.portField.text.intValue;
+
     }
     
     if ([[segue identifier] isEqualToString:@"PlayerScreen"])
