@@ -102,14 +102,9 @@
     }];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-//    [self initNetworkCommunication];
-}
-
 - (void)initNetworkCommunication
 {
-    NSLog(@"%@:%i", self.connectAddress, self.connectPort);
+    NSLog(@"%@:%li", self.connectAddress, (long)self.connectPort);
     
     CFReadStreamRef     readStream;
     CFWriteStreamRef    writeStream;
@@ -131,9 +126,9 @@
 
 - (void)checkExpression:(NSString *)msg
 {
-//    if ([msg isEqualToString:@"BIENVENUE\n"])
-//        [self messageSend:@"team1"];
-//    
+    if ([msg isEqualToString:@"BIENVENUE\n"])
+        [self messageSend:@"ADMIN"];
+    
 }
 
 - (void)addToTextView:(NSString *)sender withMsg:(NSString *)text
@@ -144,8 +139,7 @@
     else
         textView.text = [NSString stringWithFormat:@"%@%@%@", textView.text, sender, text];
 //    [textView setScrollEnabled:YES];
-    [textView setScrollsToTop:NO];
-    [textView scrollRangeToVisible:NSMakeRange([textView.text length], 0)];
+//    [textView scrollRangeToVisible:NSMakeRange([textView.text length], 0)];
 }
 
 - (void)messageReceived

@@ -77,15 +77,21 @@
         msg = [msg stringByReplacingOccurrencesOfString:@"{" withString:@""];
         msg = [msg stringByReplacingOccurrencesOfString:@"}" withString:@""];
         msg = [msg stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-        NSMutableArray *inventaire = [[msg componentsSeparatedByString:@", "] mutableCopy];
-        for (int i = 0; i < [inventaire count]; i++)
-        {
-            NSRange range = [inventaire[i] rangeOfString:@" "];
-            inventaire[i] = [inventaire[i] substringFromIndex:range.location + 1];
-            [stuff addObject:inventaire[i]];
+        @try {
+            NSMutableArray *inventaire = [[msg componentsSeparatedByString:@", "] mutableCopy];
+            for (int i = 0; i < [inventaire count]; i++)
+            {
+                NSRange range = [inventaire[i] rangeOfString:@" "];
+                inventaire[i] = [inventaire[i] substringFromIndex:range.location + 1];
+                [stuff addObject:inventaire[i]];
+            }
+            stuff = inventaire;
+            [self updateStuff];
         }
-        stuff = inventaire;
-        [self updateStuff];
+        @catch (NSException *exception) {
+            NSLog(@"Server synthax error");
+        }
+
     }
     else if ([msg hasPrefix:@"niveau actuel : "])
     {
