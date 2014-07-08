@@ -24,7 +24,8 @@
 @synthesize connectPort;
 @synthesize foodButton, linemateLayButton, linemateTakeButton, foodLayButton, deraumereLayButton, deraumereTakeButton, siburLayButton, siburTakeButton, mendianeLayButton, mendianeTakeButton, phirasLayButton, phirasTakeButton, thystameLayButton, thystameTakeButton;
 @synthesize foodLabel, linemateLabel, deraumereLabel, siburLabel, mendianeLabel, phirasLabel, thystameLabel, levelLabel;
-@synthesize needDeraumere, needLinemate, needMendiane, needPhiras, needSibur, needThystame, needPlayer;
+@synthesize needDeraumere, needLinemate, needMendiane, needPhiras, needSibur, needThystame, needPlayer, expButton, forkButton, upButton;
+@synthesize forwardLabel, leftlabel, rightLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -269,6 +270,16 @@
     [self messageSend:@"inventaire"];
 }
 
+- (IBAction)expulse:(id)sender {
+    [self messageSend:@"expulse"];
+}
+
+- (IBAction)forkAction:(id)sender {
+    [self messageSend:@"fork"];
+}
+
+
+
 #pragma mark - Managing view
 
 - (void)viewDidLoad
@@ -296,6 +307,13 @@
     mendianeLabel.layer.cornerRadius = 45;
     phirasLabel.layer.cornerRadius = 45;
     thystameLabel.layer.cornerRadius = 45;
+    expButton.layer.cornerRadius = 45;
+    forkButton.layer.cornerRadius = 45;
+    upButton.layer.cornerRadius = 45;
+    forwardLabel.layer.cornerRadius = 45;
+    leftlabel.layer.cornerRadius = 45;
+    rightLabel.layer.cornerRadius = 45;
+
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
         self.navigationController.interactivePopGestureRecognizer.delegate = nil;
@@ -340,7 +358,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"Player connect to %@:%li", self.connectAddress, (long)self.connectPort);
-    [self initNetworkCommunication];
+//    [self initNetworkCommunication];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

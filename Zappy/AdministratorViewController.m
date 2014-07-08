@@ -121,14 +121,15 @@
     
     [inputStream open];
     [outputStream open];
+ 
     
+    [self messageSend:@"ADMIN"];
 }
 
 - (void)checkExpression:(NSString *)msg
 {
-    if ([msg isEqualToString:@"BIENVENUE\n"])
-        [self messageSend:@"ADMIN"];
-    
+//    if ([msg isEqualToString:@"BIENVENUE\n"])
+//        [self messageSend:@"ADMIN"];
 }
 
 - (void)addToTextView:(NSString *)sender withMsg:(NSString *)text
@@ -156,7 +157,8 @@
             if (nil != output)
             {
                 NSLog(@"server said: %@", output);
-                [self addToTextView:@"Server~>" withMsg:output];
+                [self checkExpression:output];
+                [self addToTextView:@"Server~>\n" withMsg:output];
             }
         }
     }

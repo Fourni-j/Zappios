@@ -56,8 +56,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *needThystame;
 @property (weak, nonatomic) IBOutlet UILabel *needPlayer;
 
+@property (weak, nonatomic) IBOutlet UIButton *expButton;
+@property (weak, nonatomic) IBOutlet UIButton *upButton;
+@property (weak, nonatomic) IBOutlet UIButton *forkButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet UIButton *forwardLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rightLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *leftlabel;
+
+- (IBAction)expulse:(id)sender;
+- (IBAction)forkAction:(id)sender;
 
 - (IBAction)avance:(UIButton *)sender;
 - (IBAction)turnLeft:(id)sender;
