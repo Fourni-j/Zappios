@@ -11,6 +11,12 @@
 #import "PlayerViewController.h"
 
 @interface ViewController ()
+{
+    UIActivityIndicatorView *indicator;
+    NSMutableData *receivedData;
+    NSString     *prevLogin;
+}
+
 @end
 
 
@@ -118,11 +124,73 @@
     [self.view endEditing:YES];
 }
 
+
 #pragma mark - Windows caracteristics
 
 - (BOOL)prefersStatusBarHidden
 {
     return true;
 }
+
+#pragma mark - IP Finder
+
+- (IBAction)findIP:(id)sender {
+    [self getIPFromLogin];
+}
+
+- (void)getIPFromLogin
+{
+    NSString *login = self.loginField.text;
+    
+    if ([login isEqualToString:@""] || [login isEqualToString:prevLogin])
+        return;
+    
+    prevLogin = login;
+    
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicator.frame = CGRectMake(0, 0, 40, 40);
+    indicator.center = self.view.center;
+    [self.view addSubview:indicator];
+    [indicator bringSubviewToFront:self.view];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    [indicator startAnimating];
+    
+
+    NSString *post=@"login=fourni_j&password=IC1nyM%5EC";
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    postData = [post dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", [postData length]];
+    NSString *show = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", show);
+    
+    receivedData = [NSMutableData dataWithCapacity:0];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://intra.epitech.eu/user/%@/", login]]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSString *responseString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response : %@", responseString);
+    NSRange range = [responseString rangeOfString:@"10.16.253."];
+    range.length = 13;
+    
+    NSString *tmp = [responseString substringWithRange:range];
+    NSLog(@"Ip : %@", tmp);
+    self.addressField.text = tmp;
+    [indicator stopAnimating];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [receivedData appendData:data];
+}
+
 
 @end

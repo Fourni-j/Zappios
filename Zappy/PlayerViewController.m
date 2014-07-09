@@ -358,7 +358,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"Player connect to %@:%li", self.connectAddress, (long)self.connectPort);
-//    [self initNetworkCommunication];
+    [self initNetworkCommunication];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

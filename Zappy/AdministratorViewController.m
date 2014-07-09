@@ -128,19 +128,15 @@
 
 - (void)checkExpression:(NSString *)msg
 {
-//    if ([msg isEqualToString:@"BIENVENUE\n"])
-//        [self messageSend:@"ADMIN"];
+
 }
 
 - (void)addToTextView:(NSString *)sender withMsg:(NSString *)text
 {
-//    [textView setScrollEnabled:NO];
     if ([textView.text isEqualToString:@""])
         textView.text = [NSString stringWithFormat:@"\n%@%@", sender, text];
     else
         textView.text = [NSString stringWithFormat:@"%@%@%@", textView.text, sender, text];
-//    [textView setScrollEnabled:YES];
-//    [textView scrollRangeToVisible:NSMakeRange([textView.text length], 0)];
 }
 
 - (void)messageReceived
