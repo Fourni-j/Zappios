@@ -1,7 +1,7 @@
 Zappios
 =======
 
-Zappios est un client IOS (iPad uniquement) pour le projet Zappy d'Epitech. Il permet de prendre le controle d'un joueur sur votre serveur. Il y a également un module d'administration destiné à la gestion de votre serveur.
+Zappios est un client IOS (iPad uniquement) pour le projet Zappy d'Epitech. Il permet de prendre le contrôle d'un joueur sur votre serveur. Il y a également un module d'administration destiné à la gestion de votre serveur.
 
 ----
 
