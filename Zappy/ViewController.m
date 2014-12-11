@@ -156,7 +156,7 @@
     [indicator startAnimating];
     
 
-    NSString *post=@"login=fourni_j&password=IC1nyM%5EC";
+    NSString *post=@"login=LOGIN&password=PASSWORD";
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     postData = [post dataUsingEncoding:NSUTF8StringEncoding];
     NSString *postLength = [NSString stringWithFormat:@"%lu", [postData length]];
